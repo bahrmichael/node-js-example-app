@@ -1,1 +1,5 @@
-
+- [ ] integration testing framework aussuchen
+- [ ] leeren test bauen sodass `npm test` durchlaeuft
+- [ ] pruefen dass der build von [travis](https://travis-ci.org/bahrmichael/node-js-example-app) richtig ausgefuehrt wird
+- [ ] integrations test schreiben der prueft dass eine GET schnittstelle einen jedes mal um eins erhoehten counter zurueckgibt
+- [ ] GET schnittstelle inkl. unit-tests implementieren
