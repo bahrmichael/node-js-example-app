@@ -1,0 +1,22 @@
+{
+  "name": "node-js-example-app",
+  "version": "1.0.0",
+  "description": "Small testing app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrmichael/node-js-example-app.git"
+  },
+  "author": "bahrmichael jtheb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahrmichael/node-js-example-app/issues"
+  },
+  "homepage": "https://github.com/bahrmichael/node-js-example-app#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
