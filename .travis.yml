@@ -4,4 +4,5 @@ node_js:
 install:
 - yarn install
 script:
-- node src/main/server.js ; yarn test && codecov
+- node src/main/server.js &
+- yarn test && codecov
