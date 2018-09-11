@@ -1,7 +1,7 @@
-- [:heavy_check_mark:] integration testing framework aussuchen
-- [:heavy_check_mark:] node projekt inkl. package.json aufsetzen
-- [:heavy_check_mark:] leeren test bauen sodass `npm test` durchlaeuft
-- [:heavy_check_mark:] `travis.yml` in `.travis.yml` umbennen und pruefen dass der build von [travis](https://travis-ci.org/bahrmichael/node-js-example-app) richtig ausgefuehrt wird
+- [x] integration testing framework aussuchen
+- [x] node projekt inkl. package.json aufsetzen
+- [x] leeren test bauen sodass `npm test` durchlaeuft
+- [x] `travis.yml` in `.travis.yml` umbennen und pruefen dass der build von [travis](https://travis-ci.org/bahrmichael/node-js-example-app) richtig ausgefuehrt wird
 - [ ] integration tests schreiben der prueft dass eine GET schnittstelle einen jedes mal um eins erhoehten counter zurueckgibt -> die tests sollen sich komplett mit mit dem neuen kommando `yarn e2e` ausfuehren lassen. man soll vorher nicht den server von hand starten muessen (das starten und beenden des servers soll in `yarn e2e` eingebaut werden). 
 
 ```
