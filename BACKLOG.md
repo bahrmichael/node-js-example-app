@@ -5,6 +5,8 @@
 - [ ] integration tests schreiben der prueft dass eine GET schnittstelle einen jedes mal um eins erhoehten counter zurueckgibt -> die tests sollen sich komplett mit mit dem neuen kommando `yarn e2e` ausfuehren lassen. man soll vorher nicht den server von hand starten muessen (das starten und beenden des servers soll in `yarn e2e` eingebaut werden). 
 
 ```
+# yarn test
+
 yarn run v1.7.0
 $ jest --coverage --config src/test/jest.conf.js
  FAIL  src/test/server.spec.js
