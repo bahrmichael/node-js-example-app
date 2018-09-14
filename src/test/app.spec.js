@@ -1,6 +1,12 @@
-//const app = require('./app.js');
+let request = require('supertest');
 
-// Just a simple initial unit test
-test('Empty test', () => {
-	expect(true).toBe(true);
+request = request('http://localhost:1337');
+
+describe('Test GET / on the plain REST Server', () => {
+	it('Responds with Welcome message', function(done) {
+		request
+			.get('/')
+			.expect('Welcome')
+			.expect(200, done);
+	});
 });

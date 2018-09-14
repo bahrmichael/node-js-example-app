@@ -6,9 +6,8 @@
 
 	- [ ] Testaufruf von `travis.yml` in `package.json` auslagern.
 	- [ ] Server automatisch beenden/starten. (Bash-Script)
-	- [ ] automatische Portzuweisung und kommunikation dieser einbauen.
-	- [ ] Integrationstests erweitern. (Andere HTTP Meldungen)
-	- [ ] Countererhöhung testen
+	- [ ] automatische Portzuweisung und Kommunikation dieser einbauen.
+	- [x] Countererhöhung testen
 
 ```
 # yarn test
@@ -44,3 +43,4 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 	- [x] GET schnittstelle implementieren
 	- [ ] Unit Tests zu `app.js`
 	- [ ] Unit Tests zu `server.js`
+	- [ ] Integrationstests erweitern. (Andere HTTP-Fehlercodes testen)
