@@ -2,7 +2,13 @@
 - [x] node projekt inkl. package.json aufsetzen
 - [x] leeren test bauen sodass `npm test` durchlaeuft
 - [x] `travis.yml` in `.travis.yml` umbennen und pruefen dass der build von [travis](https://travis-ci.org/bahrmichael/node-js-example-app) richtig ausgefuehrt wird
-- [ ] integration tests schreiben der prueft dass eine GET schnittstelle einen jedes mal um eins erhoehten counter zurueckgibt -> die tests sollen sich komplett mit mit dem neuen kommando `yarn e2e` ausfuehren lassen. man soll vorher nicht den server von hand starten muessen (das starten und beenden des servers soll in `yarn e2e` eingebaut werden). 
+- [ ] integration tests schreiben der prueft dass eine GET schnittstelle einen jedes mal um eins erhoehten counter zurueckgibt -> die tests sollen sich komplett mit mit dem neuen kommando `yarn e2e` ausfuehren lassen. man soll vorher nicht den server von hand starten muessen (das starten und beenden des servers soll in `yarn e2e` eingebaut werden).
+
+	- [ ] Testaufruf von `travis.yml` in `package.json` auslagern.
+	- [ ] Server automatisch beenden/starten. (Bash-Script)
+	- [ ] automatische Portzuweisung und kommunikation dieser einbauen.
+	- [ ] Integrationstests erweitern. (Andere HTTP Meldungen)
+	- [ ] Countererhöhung testen
 
 ```
 # yarn test
@@ -35,3 +41,6 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 ```
 
 - [ ] GET schnittstelle inkl. unit-tests implementieren
+	- [x] GET schnittstelle implementieren
+	- [ ] Unit Tests zu `app.js`
+	- [ ] Unit Tests zu `server.js`

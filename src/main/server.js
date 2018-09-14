@@ -4,7 +4,7 @@ let router = express.Router();
 
 let app = require('./app');
 
-// set the port
+// if port = 0  or if the port is ommitted it will automatically select a free port
 let port = process.env.PORT || 1337;
 
 // logging routine
@@ -25,6 +25,7 @@ router.get('/', function(req, res) {
 app.use('/api', router);
 
 let server = app.listen(port, function() {
+	port = this.address().port;
 	console.log('Express server listening on port ' + port);
 });
 
