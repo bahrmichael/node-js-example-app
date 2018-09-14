@@ -11,17 +11,14 @@ describe('Test GET /api for correct counting', () => {
 			.expect(200, done);
 	});
 
-	// let testingValue1;
-	// let testingValue2;
-	//
-	// // TODO: fix NaN problem of counterValue
-	// it('Counts in +1 increments', function(done) {
-	// 	request.get('/api', function(req, res) {
-	// 		testingValue1 = res.body.counterValue;
-	// 	});
-	// 	request.get('/api', function(req, res) {
-	// 		testingValue1 = res.body.counterValue;
-	// 	});
-	// 	expect(testingValue2 - testingValue1).toBe(1);
-	// });
+	it('Counts in +1 increments', function(done) {
+		request.get('/api', function(res) {
+			let testingValue = res.body.counterValue;
+			request.get('/api')
+				.expect({ counterValue: testingValue + 1 }, done);
+		}).end(function(err, res) {
+			if (err) return done(err);
+			done();
+		});
+	});
 });
