@@ -13,13 +13,12 @@ router.use(function(req, res, next) {
 	next();
 });
 
-// initiate counter starting value
-let counterValue = 0;
+let Counter = require('./counter');
+let counter = new Counter(0);
 
 //test route (accessed at GET http://localhost:1337/api)
 router.get('/', function(req, res) {
-	res.json({ counterValue: counterValue.toString() });
-	counterValue++;
+	res.json({ counterValue: counter.countCounter() });
 });
 
 app.use('/api', router);
