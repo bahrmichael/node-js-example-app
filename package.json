@@ -4,7 +4,8 @@
   "description": "Small testing app",
   "main": "src/main/app.js",
   "scripts": {
-    "test": "jest --coverage --config src/test/jest.conf.js"
+    "test": "jest --coverage --config src/test/jest.conf.js",
+		"e2e": "./e2e.sh"
   },
   "repository": {
     "type": "git",
