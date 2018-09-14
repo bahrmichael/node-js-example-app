@@ -6,7 +6,7 @@
 
 	- [ ] Testaufruf von `travis.yml` in `package.json` auslagern.
 	- [ ] Server automatisch beenden/starten. (Bash-Script)
-	- [ ] automatische Portzuweisung und Kommunikation dieser einbauen.
+	- [x] ~automatische Portzuweisung und Kommunikation dieser einbauen.~
 	- [x] Countererhöhung testen
 
 ```
@@ -39,6 +39,10 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
+- [ ] Counter Logik 
+	- [ ] in dedizierte counter.js Klasse extrahieren (OOP)
+	- [ ] unit tests
+	- [ ] die neue counter klasse in die app.js injecten (neue objekt-instanz erzeugen die dann den counterValue haelt)
 - [ ] GET schnittstelle inkl. unit-tests implementieren
 	- [x] GET schnittstelle implementieren
 	- [ ] Unit Tests zu `app.js`
