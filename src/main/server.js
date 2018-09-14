@@ -18,7 +18,7 @@ let counter = new Counter(0);
 
 //test route (accessed at GET http://localhost:1337/api)
 router.get('/', function(req, res) {
-	res.json({ counterValue: counter.countCounter() });
+	res.json({ counterValue: counter.returnCurrentValueAndIncrementIt() });
 });
 
 app.use('/api', router);
