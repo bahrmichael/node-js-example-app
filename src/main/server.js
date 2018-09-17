@@ -1,27 +1,13 @@
 let express = require('express');
-// get an instance of the express Router
-let router = express.Router();
+let app = express();
 
-let app = require('./app');
+let api = require('./router/api');
+
+//call and mount the api to /api
+app.use('/api', api);
 
 // if port = 0  or if the port is ommitted it will automatically select a free port
 let port = process.env.PORT || 1337;
-
-// logging routine
-router.use(function(req, res, next) {
-	console.log('API accessed');
-	next();
-});
-
-let Counter = require('./counter');
-let counter = new Counter(0);
-
-//test route (accessed at GET http://localhost:1337/api)
-router.get('/', function(req, res) {
-	res.json({ counterValue: counter.returnCurrentValueAndIncrementIt() });
-});
-
-app.use('/api', router);
 
 let server = app.listen(port, function() {
 	port = this.address().port;
@@ -29,3 +15,4 @@ let server = app.listen(port, function() {
 });
 
 module.exports = server;
+module.exports = app;

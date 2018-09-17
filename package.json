@@ -2,10 +2,10 @@
   "name": "node-js-example-app",
   "version": "1.0.0",
   "description": "Small testing app",
-  "main": "src/main/app.js",
+  "main": "src/main/server.js",
   "scripts": {
     "test": "jest --coverage --config src/test/jest.conf.js",
-		"e2e": "./e2e.sh"
+    "e2e": "./e2e.sh"
   },
   "repository": {
     "type": "git",

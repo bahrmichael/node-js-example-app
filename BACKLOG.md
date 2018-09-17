@@ -42,9 +42,9 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 - [x] Counter Logik
 	- [x] in dedizierte counter.js Klasse extrahieren (OOP)
 	- [x] unit tests
-	- [ ] die neue counter klasse in die server.js injecten (neue objekt-instanz erzeugen die dann den counterValue haelt)
+	- [x] die neue counter klasse in die server.js injecten (neue objekt-instanz erzeugen die dann den counterValue haelt)
 - [ ] GET schnittstelle inkl. unit-tests implementieren
 	- [x] GET schnittstelle implementieren
-	- [ ] Unit Tests zu `app.js`
+	- [ ] Unit Tests zu `api.js`
 	- [ ] Unit Tests zu `server.js`
 	- [ ] Integrationstests erweitern. (Andere HTTP-Fehlercodes testen)
