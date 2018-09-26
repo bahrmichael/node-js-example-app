@@ -35,9 +35,9 @@ describe('Test server features', () => {
 
 		it('api Counts in +1 increments', function(done) {
 			request(server.app)
-				.get('/api/counter', function(res) {
+				.get('/api/counter')
+				.expect(function(res) {
 					let testingValue = res.body.counterValue;
-					console.log(testingValue);
 					request(server.app)
 						.get('/api/counter')
 						.expect({ counterValue: testingValue + 1 }, done);
