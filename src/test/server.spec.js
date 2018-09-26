@@ -13,14 +13,14 @@ describe('Test server features', () => {
 			server.startServer('fuck');
 		}).toThrow();
 		expect(() => {
-			server.routeAPI();
+			server.injectRoutes();
 		}).toThrow();
 		expect(server.port).toBe(undefined);
 	});
 
 	it('Does initate Server correctly', () => {
 		server.startServer(1337);
-		server.routeAPI();
+		server.injectRoutes();
 		expect(server.port).toEqual(1337);
 	});
 

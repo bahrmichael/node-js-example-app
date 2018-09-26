@@ -16,7 +16,7 @@ class Server {
 			throw new Error('invalid portNumber');
 		}
 	}
-	routeAPI() {
+	injectRoutes() {
 		if (typeof this.port === 'number' && this.port >= 0 && this.port <= 65525) {
 			let api = require('./router/api');
 			//call and mount the api to /api
@@ -27,7 +27,7 @@ class Server {
 	}
 	closeServer() {
 		this.server.close();
-		console.log('Express server closed. Port ' + this.port + ' now unavaillable.');
+		console.log('Express server closed. Port ' + this.port + ' now available.');
 	}
 }
 
@@ -35,6 +35,6 @@ class Server {
 
 // let server = new Server();
 // server.startServer(1337);
-// server.routeAPI();
+// server.injectRoutes();
 
 module.exports = Server;
