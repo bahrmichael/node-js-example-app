@@ -4,4 +4,4 @@ node_js:
 install:
 - yarn install
 script:
-- yarn e2e && codecov
+- yarn test && codecov
