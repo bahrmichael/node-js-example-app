@@ -7,13 +7,14 @@ class Server {
 	startServer(portNumber) {
 		if (typeof portNumber === 'number' && portNumber >= 0 && portNumber <= 65525) {
 		// if port = 0  or if the port is ommitted it will automatically select a free port
-			this.port = process.env.PORT || portNumber;
-			this.server = this.app.listen(this.port, function() {
-				this.port = this.address().port;
-				console.log('Express server listening on port ' + this.port + '.');
+			let port = process.env.PORT || portNumber;
+			this.server = this.app.listen(port, function() {
+				port = this.address().port;
+				console.log('Express server listening on port ' + port + '.');
 			});
+			this.port = port;
 		} else {
-			throw new Error('invalid portNumber');
+			throw new Error(portNumber + ' is an invalid port. The port must be a number and in the range [0, 65525]');
 		}
 	}
 	injectRoutes() {
@@ -22,12 +23,16 @@ class Server {
 			//call and mount the api to /api
 			this.app.use('/api', api);
 		} else {
-			throw new Error('startServer not called');
+			throw new Error('Port of startServer() not availaible. Could it not have been initated?');
 		}
 	}
 	closeServer() {
-		this.server.close();
-		console.log('Express server closed. Port ' + this.port + ' now available.');
+		if (this.server !== undefined) {
+			this.server.close();
+			console.log('Express server closed. Port ' + this.port + ' now unavailable.');
+		} else {
+			throw new Error('Server not defined yet');
+		}
 	}
 }
 

@@ -43,8 +43,8 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 	- [x] in dedizierte counter.js Klasse extrahieren (OOP)
 	- [x] unit tests
 	- [x] die neue counter klasse in die server.js injecten (neue objekt-instanz erzeugen die dann den counterValue haelt)
-- [ ] GET schnittstelle inkl. unit-tests implementieren
+- [x] GET schnittstelle inkl. unit-tests implementieren
 	- [x] GET schnittstelle implementieren
-	- [ ] Unit Tests zu `api.js`
-	- [ ] Unit Tests zu `server.js`
-	- [ ] Integrationstests erweitern. (Andere HTTP-Fehlercodes testen)
+	- [x] Unit Tests zu `api.js`
+	- [x] Unit Tests zu `server.js`
+	- [x] Integrationstests erweitern. (Andere HTTP-Fehlercodes testen)

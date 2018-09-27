@@ -6,7 +6,8 @@ describe("Counting Router", () => {
 	it("should be called once.", () => {
 		let req = {};
 		let res = {};
-		let spy = res.json = sinon.spy();
+		let spy = sinon.spy();
+		res.json = spy;
 
 		getCounting(req, res);
 		expect(spy.calledOnce).toEqual(true);
