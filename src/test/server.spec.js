@@ -1,7 +1,6 @@
 let Server = require('../main/server');
 
 let request = require('supertest');
-//request = request('http://localhost:1337');
 
 describe('Doesnt initiate server if the configuration is bad', () => {
 	it('Doesnt start the server with invalid port numbers', () => {
@@ -71,12 +70,5 @@ describe('Test server features', () => {
 				if (err) return done(err);
 				done();
 			});
-	});
-
-	it('Should throw error if server has not been started yet', () => {
-		let systemUnderTest = new Server();
-		expect(() => {
-			systemUnderTest.closeServer();
-		}).toThrow();
 	});
 });

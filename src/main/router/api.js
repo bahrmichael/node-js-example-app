@@ -1,8 +1,8 @@
 let express = require('express');
 let router = express.Router();
 
-let getCounting = require("./getCounting");
-
-router.get('/counter', getCounting);
+// Set up counting routes
+let countingRoutes = require("./countingRoutes");
+router.get('/counter', countingRoutes.getRoute);
 
 module.exports = router;

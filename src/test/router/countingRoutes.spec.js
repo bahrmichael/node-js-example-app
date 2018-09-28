@@ -1,15 +1,15 @@
 let sinon = require('sinon');
 
-let getCounting = require('../../main/router/getCounting');
+let countingRoutes = require('../../main/router/countingRoutes');
 
 describe("Counting Router", () => {
-	it("should be called once.", () => {
+	it("Get Route should be called once.", () => {
 		let req = {};
 		let res = {};
 		let spy = sinon.spy();
 		res.json = spy;
 
-		getCounting(req, res);
+		countingRoutes.getRoute(req, res);
 		expect(spy.calledOnce).toEqual(true);
 	});
 });

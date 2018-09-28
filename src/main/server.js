@@ -30,8 +30,6 @@ class Server {
 		if (this.server !== undefined) {
 			this.server.close();
 			console.log('Express server closed. Port ' + this.port + ' now unavailable.');
-		} else {
-			throw new Error('Server not defined yet');
 		}
 	}
 }
