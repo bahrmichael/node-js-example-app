@@ -4,4 +4,6 @@
 - [ ] service layer (analog zur counter.js) schreiben ueber die daten (z.b. kalender-eintraege oder kontaktdaten) zum schreiben an die DAO uebergeben werden
 	- [ ] unit tests, die pruefen dass die daten, die an den service uebergeben werden korrekt an die DAO uebergeben werden (dass sie auch in der db ankommen ist nicht teil von diesem test)
 - [ ] api ueber die ich obige daten schreiben und auslesen kann (post/get)
+	- [ ] wie die count-route.js in eine eigene routing datei welche in den express server injected wird und selber auf die service klasse zugreift
+	- [ ] unit tests fuer das routing + integrationstests dass der gesame use case funktioniert
 - [ ] gemeinsames refactoring
