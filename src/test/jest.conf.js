@@ -14,5 +14,9 @@ module.exports = {
 	],
 	testMatch: [ '<rootDir>/src/test/**/+(*.)+(spec.js)' ],
 	rootDir: '../../',
-	testURL: "http://localhost/"
+	testURL: "http://localhost/",
+
+	globalSetup: '<rootDir>/src/test/setup.js',
+	globalTeardown: '<rootDir>/src/test/teardown.js',
+	testEnvironment: '<rootDir>/src/test/mongo-environment.js'
 };

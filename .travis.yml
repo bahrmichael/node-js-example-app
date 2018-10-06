@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-  - "7"
+- "7"
 install:
 - yarn install
 script:
 - yarn test && codecov
+cache:
+  directories:
+    - $HOME/.mongodb-binaries
