@@ -1,7 +1,8 @@
-//let appointment = require('../../main/logic/date');
+// Dummy testing only
+// TODO: add real ones!
 
-//TODO: Dummy Test - Change later!
-const { MongoClient } = require('mongodb');
+//let mongoose = require('mongoose');
+let { MongoClient } = require('mongodb');
 
 let connection;
 let db;
@@ -15,10 +16,10 @@ afterAll(async () => {
 	await connection.close();
 });
 
-it('should aggregate docs from collection', async () => {
-	const files = db.collection('files');
+test('should aggregate docs from collection', async () => {
+	const appointments = db.collection('appointments');
 
-	await files.insertMany([
+	await appointments.insertMany([
 		{
 			type: 'Document'
 		}, {
@@ -34,7 +35,7 @@ it('should aggregate docs from collection', async () => {
 		}
 	]);
 
-	const topFiles = await files.aggregate([
+	const topFiles = await appointments.aggregate([
 		{
 			$group: {
 				_id: '$type',

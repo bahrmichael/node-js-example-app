@@ -3,7 +3,7 @@ let Server = require('../main/server');
 let request = require('supertest');
 
 describe('Doesnt initiate server if the configuration is bad', () => {
-	it('Doesnt start the server with invalid port numbers', () => {
+	test('Doesnt start the server with invalid port numbers', () => {
 		let systemUnderTest = new Server();
 		expect(() => {
 			systemUnderTest.startServer(-1337);
@@ -13,7 +13,7 @@ describe('Doesnt initiate server if the configuration is bad', () => {
 		}).toThrow();
 	});
 
-	it('Doesnt start the injectRoutes without a correct port', () => {
+	test('Doesnt start the injectRoutes without a correct port', () => {
 		let systemUnderTest = new Server();
 		expect(() => {
 			systemUnderTest.injectRoutes();
@@ -29,18 +29,18 @@ describe('Test server features', () => {
 		systemUnderTest.startServer(1337);
 		systemUnderTest.injectRoutes();
 
-		it('sets port correctly', () => {
+		test('sets port correctly', () => {
 			expect(systemUnderTest.port).toEqual(1337);
 		});
 
-		it('responds with JSON', function(done) {
+		test('responds with JSON', function(done) {
 			request(systemUnderTest.app)
 				.get('/api/counter')
 				.expect('Content-Type', /json/)
 				.expect(200, done);
 		});
 
-		it('api Counts in +1 increments', function(done) {
+		test('api Counts in +1 increments', function(done) {
 			request(systemUnderTest.app)
 				.get('/api/counter')
 				.expect(function(res) {
@@ -55,7 +55,7 @@ describe('Test server features', () => {
 		systemUnderTest.closeServer();
 	});
 
-	it('Should close the server', function(done) {
+	test('Should close the server', function(done) {
 		let systemUnderTest = new Server();
 		() => {
 			systemUnderTest.startServer(2048);
