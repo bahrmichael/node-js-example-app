@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 class Database {
 	constructor() {
-		mongoose.connect('mongodb://localhost:27017', { useNewUrlParser: true });
+		mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 		let db = mongoose.connection;
 		db.on('error', () => {
 			throw new Error('Connection error');
