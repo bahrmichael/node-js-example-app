@@ -29,7 +29,7 @@ class Server {
 	closeServer() {
 		if (this.server !== undefined) {
 			this.server.close();
-			console.log('Express server closed. Port ' + this.port + ' now unavailable.');
+			console.log('Express server closed. Port ' + this.port + ' now available again.');
 		}
 	}
 }
