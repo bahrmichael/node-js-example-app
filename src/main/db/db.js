@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-class database {
+class Database {
 	constructor() {
 		mongoose.connect('mongodb://localhost:27017', { useNewUrlParser: true });
 		let db = mongoose.connection;
@@ -13,4 +13,4 @@ class database {
 	}
 }
 
-module.exports = database;
+module.exports = Database;
