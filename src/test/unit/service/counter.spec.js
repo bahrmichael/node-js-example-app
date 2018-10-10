@@ -1,4 +1,4 @@
-let Counter = require('../../main/logic/counter');
+let Counter = require('../../../main/service/counter');
 
 describe('Test counter for correct initialization and counting with a random value', () => {
 	test('Initiates with correct value.', () => {

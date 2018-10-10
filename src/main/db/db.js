@@ -1,5 +1,4 @@
 let mongoose = require('mongoose');
-// let dateDAO = require('../DAO/dateDAO');
 
 class database {
 	constructor() {

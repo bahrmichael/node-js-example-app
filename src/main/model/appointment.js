@@ -7,6 +7,6 @@ let appointmentSchema = new mongoose.Schema({
 	location: { type: String }
 });
 
-let appointment = mongoose.model('Date', appointmentSchema);
+let Appointment = mongoose.model('Date', appointmentSchema);
 
-module.exports = appointment;
+module.exports = Appointment;

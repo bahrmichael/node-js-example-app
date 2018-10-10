@@ -1,6 +1,6 @@
 let sinon = require('sinon');
 
-let countingRoutes = require('../../main/router/countingRoutes');
+let countingRoutes = require('../../../../main/web/routes/counting');
 
 describe("Counting Router", () => {
 	it("Get Route should be called once.", () => {

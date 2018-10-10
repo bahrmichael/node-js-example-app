@@ -19,11 +19,11 @@ class Server {
 	}
 	injectRoutes() {
 		if (typeof this.port === 'number' && this.port >= 0 && this.port <= 65525) {
-			let api = require('./router/api');
+			let api = require('./web/api');
 			//call and mount the api to /api
 			this.app.use('/api', api);
 		} else {
-			throw new Error('Port of startServer() not availaible. Could it not have been initated?');
+			throw new Error('Port of startServer() not available. Could it not have been initiated?');
 		}
 	}
 	closeServer() {

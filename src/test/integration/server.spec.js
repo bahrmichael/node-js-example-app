@@ -1,4 +1,4 @@
-let Server = require('../main/server');
+let Server = require('../../main/server');
 
 let request = require('supertest');
 
@@ -23,7 +23,7 @@ describe('Doesnt initiate server if the configuration is bad', () => {
 });
 
 describe('Test server features', () => {
-	describe('Does initate and handle the server correctly', () => {
+	describe('Does initiate and handle the server correctly', () => {
 		// setup the Testserver...
 		let systemUnderTest = new Server();
 		systemUnderTest.startServer(1337);

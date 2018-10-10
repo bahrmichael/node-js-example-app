@@ -1,19 +1,20 @@
-let appointment = require('../logic/appointment');
+let Appointment = require('../model/appointment');
 
-class appointmentDAO {
+class AppointmentRepository {
 	addDate(startDate, endDate, name, location) {
-		let newDate = new appointment({
+		const newDate = new Appointment({
 			startDate: startDate,
 			endDate: endDate,
 			name: name,
 			location: location });
 		newDate.save(function (err, appointment) {
-			if (err) throw new Error('Couldnt save the appointment in the database');
+			if (err) throw new Error('Couldn\'t save the appointmentRepository in the database');
 			console.log(appointment.name + " saved in database");
 		});
 	}
 	deleteDate() {}
 	updateDate() {}
+	readDate() {}
 }
 
-module.exports = appointmentDAO;
+module.exports = AppointmentRepository;

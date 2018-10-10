@@ -1,4 +1,4 @@
-let Counter = require('../logic/counter');
+let Counter = require('../../service/counter');
 let counter = new Counter(0);
 
 let getRoute = function(req, res) {
