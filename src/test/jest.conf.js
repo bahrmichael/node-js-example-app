@@ -6,9 +6,6 @@ module.exports = {
 	globals: {
 		__TRANSFORM_HTML__: true
 	},
-	// moduleNameMapper: {
-	// 	'app/(.*)': '<rootDir>/src/main/$1'
-	// },
 	reporters: [
 		'default'
 	],
