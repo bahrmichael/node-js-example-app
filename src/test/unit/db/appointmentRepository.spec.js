@@ -15,6 +15,7 @@ beforeAll(async () => {
 
 afterAll(async () => {
 	await connection.close();
+	await db.close();
 });
 
 test('should aggregate docs from collection', async () => {
