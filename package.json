@@ -4,7 +4,7 @@
   "description": "Small testing app",
   "main": "src/main/server.js",
   "scripts": {
-    "test": "jest --coverage --config src/test/jest.conf.js"
+    "test": "jest --coverage --config src/test/jest.conf.js --detectOpenHandles"
   },
   "repository": {
     "type": "git",
