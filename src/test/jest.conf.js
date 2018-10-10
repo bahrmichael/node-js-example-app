@@ -17,6 +17,5 @@ module.exports = {
 	testURL: "http://localhost/",
 
 	globalSetup: '<rootDir>/src/test/setup.js',
-	globalTeardown: '<rootDir>/src/test/teardown.js',
-	testEnvironment: '<rootDir>/src/test/mongo-environment.js'
+	globalTeardown: '<rootDir>/src/test/teardown.js'
 };

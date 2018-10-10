@@ -1,5 +1,6 @@
-// Dummy testing only
-// TODO: add real ones!
+/**
+	* @jest-environment <rootDir>/src/test/mongo-environment.js
+	*/
 
 //let mongoose = require('mongoose');
 let { MongoClient } = require('mongodb');

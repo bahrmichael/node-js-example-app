@@ -14,6 +14,7 @@ describe('Appointment Validator', () => {
 			expect(err.errors.startDate).toExist;
 			expect(err.errors.endDate).toExist;
 			expect(err.errors.name).toExist;
+			expect(err.errors.location).toNotExist;
 			done();
 		});
 	});
