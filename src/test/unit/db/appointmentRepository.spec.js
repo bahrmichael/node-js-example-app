@@ -8,8 +8,6 @@ let { MongoClient } = require('mongodb');
 let connection;
 let db;
 
-let appointmentRepository = require('../../../main/db/appointmentRepository');
-
 beforeAll(async () => {
 	connection = await MongoClient.connect(global.__MONGO_URI__);
 	db = await connection.db(global.__MONGO_DB_NAME__);
@@ -21,9 +19,6 @@ afterAll(async () => {
 
 describe('Test appointmentRepository function', () => {
 	test('testing addOne', async () => {
-		let testDate = 1337;
-		let testString = "test";
-		appointmentRepository.addOne(testDate, testDate, testString, testString);
 
 		const appointments = db.collection('appointments');
 		await appointments.insertMany([
