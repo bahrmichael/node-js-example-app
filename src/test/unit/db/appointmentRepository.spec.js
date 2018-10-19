@@ -8,6 +8,8 @@ let { MongoClient } = require('mongodb');
 let connection;
 let db;
 
+let appointmentRepository = require('../../../main/db/appointmentRepository');
+
 beforeAll(async () => {
 	connection = await MongoClient.connect(global.__MONGO_URI__);
 	db = await connection.db(global.__MONGO_DB_NAME__);
@@ -17,50 +19,55 @@ afterAll(async () => {
 	await connection.close();
 });
 
-test('should aggregate docs from collection', async () => {
-	const appointments = db.collection('appointments');
+describe('Test appointmentRepository function', () => {
+	test('testing addOne', async () => {
+		let testDate = 1337;
+		let testString = "test";
+		appointmentRepository.addOne(testDate, testDate, testString, testString);
 
-	await appointments.insertMany([
-		{
-			type: 'Document'
-		}, {
-			type: 'Video'
-		}, {
-			type: 'Image'
-		}, {
-			type: 'Document'
-		}, {
-			type: 'Image'
-		}, {
-			type: 'Document'
-		}
-	]);
+		const appointments = db.collection('appointments');
+		await appointments.insertMany([
+			{
+				type: 'Document'
+			}, {
+				type: 'Video'
+			}, {
+				type: 'Image'
+			}, {
+				type: 'Document'
+			}, {
+				type: 'Image'
+			}, {
+				type: 'Document'
+			}
+		]);
 
-	const topFiles = await appointments.aggregate([
-		{
-			$group: {
-				_id: '$type',
-				count: {
-					$sum: 1
+		const topFiles = await appointments.aggregate([
+			{
+				$group: {
+					_id: '$type',
+					count: {
+						$sum: 1
+					}
+				}
+			}, {
+				$sort: {
+					count: -1
 				}
 			}
-		}, {
-			$sort: {
-				count: -1
-			}
-		}
-	]).toArray();
+		]).toArray();
 
-	expect(topFiles).toEqual([
-		{
-			_id: 'Document',
-			count: 3
-		}, {
-			_id: 'Image',
-			count: 2
-		}, {
-			_id: 'Video',
-			count: 1
-		}
-	]);
+		expect(topFiles).toEqual([
+			{
+				_id: 'Document',
+				count: 3
+			}, {
+				_id: 'Image',
+				count: 2
+			}, {
+				_id: 'Video',
+				count: 1
+			}
+		]);
+	});
 });

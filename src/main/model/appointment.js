@@ -7,6 +7,12 @@ let appointmentSchema = new mongoose.Schema({
 	location: { type: String }
 });
 
-let Appointment = mongoose.model('Date', appointmentSchema);
+appointmentSchema.methods.findOneByName = function (callback) {
+	return this.model('Appointment').findOne({ name: this.name }, function(err, val) {
+		callback(!!val);
+	});
+};
+
+let Appointment = mongoose.model('Appointment', appointmentSchema);
 
 module.exports = Appointment;

@@ -1,4 +1,4 @@
-- [ ] [embedded mongodb](https://www.npmjs.com/package/mongodb-memory-server) integrieren
+- [x] [embedded mongodb](https://www.npmjs.com/package/mongodb-memory-server) integrieren
 - [ ] [DAO](https://en.wikipedia.org/wiki/Data_access_object) layer erstellen ueber das auf die DB zugegriffen werden kann (darf aktuell beliebige objekte in eine collection schreiben und davon lesen; spaeter werden wir dedizierte methoden pro objekt-art schreiben)
 	- [ ] mit unit tests einzelne daten bis in den memory server schreiben und auslesen. wir wollen hier testen, dass die DAO sowie die embedded mongodb tun was wir erwarten
 - [ ] service layer (analog zur counter.js) schreiben ueber die daten (z.b. kalender-eintraege oder kontaktdaten) zum schreiben an die DAO uebergeben werden

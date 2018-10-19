@@ -1,7 +1,7 @@
 let Appointment = require('../model/appointment');
 
 class AppointmentRepository {
-	addDate(startDate, endDate, name, location) {
+	addOne(startDate, endDate, name, location) {
 		const newDate = new Appointment({
 			startDate: startDate,
 			endDate: endDate,
@@ -12,9 +12,14 @@ class AppointmentRepository {
 			console.log(appointment.name + " saved in database");
 		});
 	}
-	deleteDate() {}
-	updateDate() {}
-	readDate() {}
+	findByName(name)  {
+		Appointment.findByName({ name: name }, function(err, appointments) {
+			return appointments;
+		});
+	}
+	deleteByName(name) {}
+	findByNameAndUpdate(name) {}
+	readByName(name) {}
 }
 
 module.exports = AppointmentRepository;
